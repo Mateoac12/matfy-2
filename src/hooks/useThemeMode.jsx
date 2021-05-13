@@ -5,7 +5,7 @@ const DOCUMENT_STYLES = document.documentElement.style
 const useThemeMode = ({ modeOfTheme }) => {
   const localTheme = window.localStorage.getItem('typeTheme')
   const themeToUse = localTheme || window.localStorage.setItem('typeTheme', JSON.stringify(true)) || true
-  console.log({ localTheme, themeToUse })
+
   const [theme, setTheme] = useState(JSON.parse(themeToUse))
 
   const infoOfSingleTheme = Object.entries(modeOfTheme)
