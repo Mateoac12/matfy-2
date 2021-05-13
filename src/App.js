@@ -27,9 +27,14 @@ function App() {
             <Route
               component={ListOfResults}
               path="/search/:keyword"
-              />
+            />
             <Route
               component={ErrorPage}
+              path="/search/:keyword*"
+            />
+            <Route
+              component={ErrorPage}
+              path="/error"
             />
           </Switch>
         </GifsContextProvider>
